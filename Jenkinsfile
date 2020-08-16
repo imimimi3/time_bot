@@ -2,14 +2,10 @@
 pipeline {
 agent any
 stages {
-stage('Build') {
+stage('Clone') {
 steps {
-echo 'Building...'
-}
-}
-stage('Test') {
-steps {
-echo 'Testing...'
+git clone https://github.com/imimimi3/time_bot /var/gitbot
+echo 'Clone...'
 }
 }
 }
